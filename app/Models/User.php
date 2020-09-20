@@ -54,4 +54,8 @@ return $this->hasOne(Profile::class)->orderBy('created_at','DESC');
 
         return $this->hasMany(Post::class);
     }
+
+    public function following(){
+        return $this->belongsToMany(Profile::class);
+    }
 }
